@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+//     1.   Write a JavaScript program find palindrome  using function
+function isPalindrome(str) {
+    const reversed = str.split('').reverse().join('');
+    return str === reversed;
+}
+
+// Example usage
+const inputString = prompt("Enter a string:");
+const palindromeResult = isPalindrome(inputString);
+console.log(`"${inputString}" is a palindrome:`, palindromeResult);
+
+// 2.   Write a JavaScript program to check the last digit same OR not using UDF.(User Input
+function areLastDigitsSame(num1, num2, num3) {
+    const lastDigit1 = num1 % 10;
+    const lastDigit2 = num2 % 10;
+    const lastDigit3 = num3 % 10;
+    return lastDigit1 === lastDigit2 && lastDigit1 === lastDigit3;
+}
+
+// Example usage
+const num1 = parseInt(prompt("Enter first number:"));
+const num2 = parseInt(prompt("Enter second number:"));
+const num3 = parseInt(prompt("Enter third number:"));
+const sameLastDigits = areLastDigitsSame(num1, num2, num3);
+console.log("Last digits are same:", sameLastDigits);
+
+//        Three Integer Numbers).
+// 3.   Check Armstrong Number of Three Digits Using UDF.
+function isArmstrong(num) {
+    const digit1 = Math.floor(num / 100);
+    const digit2 = Math.floor((num % 100) / 10);
+    const digit3 = num % 10;
+    const armstrong = Math.pow(digit1, 3) + Math.pow(digit2, 3) + Math.pow(digit3, 3);
+    return armstrong === num;
+}
+
+// Example usage
+const number = parseInt(prompt("Enter a three-digit number:"));
+const armstrongResult = isArmstrong(number);
+console.log(`${number} is an Armstrong number:`, armstrongResult);
+
+</script>
+</html>
